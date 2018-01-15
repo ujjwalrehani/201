@@ -1,0 +1,68 @@
+# File:    design2.txt
+# Author:  Ujjwal Rehani
+# Date:    4/13/2017 
+# Section: 21
+# E-mail:  urehani1@umbc.edu 
+# Description:
+#   This document outlines the functions to be used in project 2
+
+SNACK_NAME = 0	#zero index is name
+SNACK_PRICE = 1  #first index is price
+SNACK_QUANTITY = 2	#second index is quantity
+SNACK_CODE = 3	#third index is snack code
+
+# printGreeting() explains the program to the user
+# Input:          none
+# Output:         none (prints greeting)
+
+# loadFile() reads in file and creates 3d list
+# Input:          none
+# Output:  itemList       a 3d list
+
+# displayMachine() prints out current vending machine
+# Input: itemList    the 3d list that contains all the snacks
+# Output:         none (prints items and their info)
+
+# displayBalance() prints out balance on card
+# Input: initialBalance  the balance that is first loaded on card
+# Output: balance;   amount of money on card
+
+# addMoney() adds money to card
+# Input: balance; 		amount of money currently on card
+# Output: newBalance; 	balance after adding money
+
+# menuChoice() displays menu and asks user to select an option
+# Input:		None
+# Output: 		None (prints choices)
+
+# firstBalance() asks user for the initial amount to be put on card
+# Input: 	Nonce
+# Output: first_balance 	the initial amount of money on card
+
+# saveFile() saves current vending machine to text file 
+# Input: itemList the 3d list that contains all the items
+# Output:  none (new text file gets written to)
+
+
+def main():
+	# print the greeting to the user
+    printGreeting()
+	# read a file and create a list
+	loadFile()
+	# get the initial amount of money on card
+	firstBalance()
+	
+	# ask the user the select an option
+	menuChoice()
+	
+	# helper function called within menuChoice when 4th option is picked
+	addMoney() 
+	# helper function called within menuChoice when 3rd option is picked
+	displayBalance() 
+	# helper function called within menuChoice when 1st option is picked
+	displayMachine()	
+	# helper function called within menuChoice when 5th option is picked
+	saveFile() 
+	
+
+main()

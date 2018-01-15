@@ -1,0 +1,61 @@
+# File:    design3.txt
+# Author:  Ujjwal Rehani
+# Date:    5/4/2017 
+# Section: 21
+# E-mail:  urehani1@umbc.edu 
+# Description:
+#   This document outlines the functions to be used in project 3
+
+# printGreeting() explains the program to the user
+# Input:          none
+# Output:         none (prints greeting)
+
+# loadFile() reads in file and creates 2d list
+# Input:          			none
+# Output:  gameBoard       a 2d list
+
+# prettyPrintBoard() prints the board with row and column labels,      
+#                    and spaces the board out so that it looks square  
+# Input:             board;   the rectangular 2d gameboard to print    
+# Output:            none;    prints the board in a pretty way  
+
+# getValidInt() reprompts the user until they enter a number
+#               valid for row and column
+# Input:        none
+# Output:       row, column; valid row and column numbers
+
+# updateBoard() 	updates board based on the user selection    
+#                   
+# Input:             row,col;      
+# Output:            updatedList;   modified list
+
+# makeIsland() 	recursively clears empty space
+#                   
+# Input:             board;      
+# Output:            newBoard;    updated board with cleared space
+
+# makeChoice() 	     Asks user what they want to do        
+# Input:             none     
+# Output:            none; Calls a function based on what user selects
+
+# checkBoard() 	     Check conditions for game over or game won  
+# Input:             board     
+# Output:            none; prints out either game over or game won message
+
+def main():
+	#prints greeting to user
+	printGreeting()
+	
+	#reads in original file containing mines
+	loadFile()
+	
+	#prints board in readable format
+	prettyPrintBoard()
+	
+	#asks the user for which spot to selecte
+	makeChoice()
+	
+	#Other functions to be used as helper functions
+
+
+main()
